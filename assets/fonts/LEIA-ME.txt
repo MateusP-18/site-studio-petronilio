@@ -1,0 +1,4 @@
+Branch Regular (fonte oficial do Studio) já está ativa via css/styles.css (Branch-Regular.woff, convertida do TTF enviado).
+A fonte não tem os caracteres – — ’ · •; nesses casos o navegador usa a fonte substituta (Cormorant Garamond). Confirme a licença de uso comercial antes de publicar.
+
+Correção: o TTF original não tinha o 'ç' minúsculo (mapeava para o 'Ç'). O 'ç' foi derivado do 'Ç' reduzido às proporções do 'c' e gravado em Branch-Regular.woff.
