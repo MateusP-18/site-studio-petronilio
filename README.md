@@ -113,3 +113,7 @@ Para reativar: 1) `heroGlass: true` em `js/config.js`; 2) no `index.html`, troqu
 
 ## Mapa da seção Contato
 - Na moldura à direita de "Informações de contato" (antes vazia), `js/main.js` monta um `<iframe>` do Google Maps (`maps.google.com/maps?q=lat,lng&output=embed`, sem chave de API, `loading="lazy"`) com o alfinete nas coordenadas de `mapaLat`/`mapaLng`, e por cima um link transparente (`.mapa-ov`): clicar em qualquer ponto do mapa abre a localização (`mapsUrl`) em nova aba. Estilos `.mapa*` no fim de `css/styles.css`. Se o mapa não carregar (bloqueador, sem internet) fica a moldura com um alfinete discreto e o link continua funcionando; sem JavaScript aparece um link de texto.
+
+## Responsividade (telas estreitas, zoom e fonte ampliada)
+- As abas de serviços usam *container queries* (`#svc`), então reagem à largura real disponível e também ao zoom / "tamanho da fonte" do celular: 4 colunas no desktop → 2 colunas (ícone ao lado do texto) → 2 colunas com ícone em cima do texto e "+" no canto (contêiner < 23rem) → 1 coluna (contêiner < 16rem) → 1 coluna empilhada (< 10rem).
+- Grades de 1 coluna (`.two`, `.dif`, `.lists`, rodapé `.fmain`) agora usam `minmax(0,1fr)` e títulos/textos quebram palavras longas, para nada ultrapassar a tela com fonte grande.
